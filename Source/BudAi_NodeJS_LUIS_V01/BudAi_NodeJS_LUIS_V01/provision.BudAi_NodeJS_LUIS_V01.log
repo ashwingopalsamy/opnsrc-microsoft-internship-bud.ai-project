@@ -1,0 +1,14 @@
+{
+  "profileName": "BudAi_NodeJS_LUIS_V01",
+  "jobId": "26d5320e-fc4d-435b-ae70-1a1fed264882",
+  "projectId": "8922.881418183715",
+  "time": "2021-12-26T21:17:33.969Z",
+  "log": [
+    "Creating Azure resources...",
+    "Checking the Existence of the Resource Group ...",
+    "Use the Resource Group: BudAi_NodeJS_LUIS_V01 at westus",
+    "Deploying QnA Resource ...",
+    "Deploying Application Insights Resource ...",
+    "Provisioning completed successfully!"
+  ]
+}

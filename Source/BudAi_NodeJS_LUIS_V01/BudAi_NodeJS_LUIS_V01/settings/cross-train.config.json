@@ -1,0 +1,17 @@
+{
+  "BudAi_NodeJS_LUIS_V01.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "": [
+        "WelcomeDialog.en-us",
+        "WishUserDialog.en-us"
+      ],
+      "Cancel": [
+        "CancelDialog.en-us"
+      ],
+      "Help": [
+        "HelpDialog.en-us"
+      ]
+    }
+  }
+}
