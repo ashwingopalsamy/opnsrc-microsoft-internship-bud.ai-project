@@ -1,4 +1,4 @@
-# Bud.ai – Microsoft Internship Project
+# Bud.ai – 
 
 ## Project Title : 
 Bud.ai – The Student Twin
