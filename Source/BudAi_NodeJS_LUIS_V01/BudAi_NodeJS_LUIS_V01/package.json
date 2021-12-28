@@ -5,11 +5,12 @@
     "dev": "cross-env NODE_ENV=dev node index.js"
   },
   "dependencies": {
-    "cross-env": "latest",
+    "@microsoft/bot-components-helpandcancel": "latest",
+    "@microsoft/bot-components-teams": "^1.2.0",
+    "@microsoft/bot-components-welcome": "latest",
     "botbuilder-ai-luis": "4.15.0-preview",
     "botbuilder-ai-qna": "4.15.0-preview",
-    "@microsoft/bot-components-helpandcancel": "latest",
-    "@microsoft/bot-components-welcome": "latest",
-    "botbuilder-dialogs-adaptive-runtime-integration-express": "4.15.0-preview"
+    "botbuilder-dialogs-adaptive-runtime-integration-express": "4.15.0-preview",
+    "cross-env": "latest"
   }
 }
