@@ -1,0 +1,103 @@
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Morning Session"
+        },
+        {
+            "type": "ColumnSet",
+            "style": "emphasis",
+            "columns": [
+                {
+                    "type": "Column",
+                    "style": "good",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Engineering Mathematics",
+                            "size": "Small"
+                        }
+                    ],
+                    "bleed": true,
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "style": "attention",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Algorithm Masterclass",
+                            "size": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "style": "warning",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Data Structures",
+                            "size": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Afternoon Session"
+        },
+        {
+            "type": "ColumnSet",
+            "style": "emphasis",
+            "columns": [
+                {
+                    "type": "Column",
+                    "style": "good",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Data Analysis",
+                            "size": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "style": "attention",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Artificial Intelligence",
+                            "size": "Small"
+                        }
+                    ],
+                    "bleed": true,
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "style": "warning",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Algorithms Masterclass",
+                            "size": "Small"
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3"
+}```

@@ -1,0 +1,73 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Courses enrolled by you : ",
+            "wrap": true,
+            "horizontalAlignment": "Center",
+            "size": "Large",
+            "weight": "Bolder",
+            "color": "Accent"
+        },
+        {
+            "type": "TextBlock",
+            "text": "1. Algorithm Masterclass",
+            "wrap": true,
+            "size": "Medium",
+            "separator": true,
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "2. Artificial Intelligence",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "3. Computer Architecture",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "4. Data Structures",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "5. Design and Analysis of Algorithms",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "6. Java Programming",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "7. Computer Networks",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "8. Python Programming",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        }
+    ]
+}

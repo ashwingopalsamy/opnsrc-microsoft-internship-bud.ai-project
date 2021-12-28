@@ -7,8 +7,8 @@
 
 # GoodMorning_Text()
 - Good Morning ! 🌄 Have a nice day ❤️✨
-- Morning Dear ! ☀️ Wish you a good day ! 😇
-- Morning, My Dear Highness ! 🌺
+- Morning Mate ! ☀️ Wish you a good day ! 😇
+- Morning, My Highness ! 🌺
 - Warm morning, highness !!! ✨❤️‍🔥
 - It's a new day and I wish you the best ! 🌻
 - Tadaaaa ! New day, New Beginnings 🥳🥳🥳
