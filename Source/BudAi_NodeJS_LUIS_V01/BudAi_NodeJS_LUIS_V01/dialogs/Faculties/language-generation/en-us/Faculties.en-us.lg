@@ -1,0 +1,84 @@
+[import](common.lg)
+
+# SendActivity_eSQPR2()
+[Activity
+    Attachments = ${json(SendActivity_eSQPR2_attachment_GzhPkN())}
+    AttachmentLayout = list
+]
+
+# SendActivity_eSQPR2_attachment_GzhPkN()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Faculty Details : ",
+            "wrap": true,
+            "horizontalAlignment": "Center",
+            "size": "Large",
+            "weight": "Bolder",
+            "color": "Accent"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Gomathi Mam - gomathib@hindusthan.net",
+            "wrap": true,
+            "size": "Medium",
+            "separator": true,
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Yamuna Mam - yamuna.it@hindusthan.net",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Mahaveer Kannan Sir - mahaveerk.it@hindusthan.net",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "K Sudhakar Sir - sudhakark.it@hindusthan.net",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Kavitha Mam - kavitha.it@hindusthan.net ",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Ganesh Sir - ganesh.it@hindusthan.net",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Prem Kumar Sir - premkumar.it@hindusthan.net",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Ilaiyaraja Sir - ilaiyaraja.it@hindusthan.net",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        }
+    ]
+}```

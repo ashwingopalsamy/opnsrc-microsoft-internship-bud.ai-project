@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "8EH3EE",
+    "name": "Faculties",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "T1AbPO"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "eSQPR2"
+          },
+          "activity": "${SendActivity_eSQPR2()}"
+        }
+      ]
+    }
+  ],
+  "generator": "Faculties.lg",
+  "recognizer": "Faculties.lu.qna",
+  "id": "Faculties"
+}

@@ -1,0 +1,91 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "fW2Bri",
+    "name": "WishUserDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "qMjlJj"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "Z1Cger"
+          },
+          "cases": [
+            {
+              "value": "afternoon",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "0DpjVu"
+                  },
+                  "activity": "${SendActivity_0DpjVu()}"
+                }
+              ]
+            },
+            {
+              "value": "evening",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "76fgMa"
+                  },
+                  "activity": "${SendActivity_76fgMa()}"
+                }
+              ]
+            },
+            {
+              "value": "night",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "XvwVEP"
+                  },
+                  "activity": "${SendActivity_XvwVEP()}"
+                }
+              ]
+            },
+            {
+              "value": "midnight",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "jASXV4"
+                  },
+                  "activity": "${SendActivity_jASXV4()}"
+                }
+              ]
+            }
+          ],
+          "condition": "=getTimeOfDay(addHours(utcNow(), 5.5))",
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "LooTUq"
+              },
+              "activity": "${SendActivity_LooTUq()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "WishUserDialog.lg",
+  "recognizer": "WishUserDialog.lu.qna",
+  "id": "WishUserDialog"
+}

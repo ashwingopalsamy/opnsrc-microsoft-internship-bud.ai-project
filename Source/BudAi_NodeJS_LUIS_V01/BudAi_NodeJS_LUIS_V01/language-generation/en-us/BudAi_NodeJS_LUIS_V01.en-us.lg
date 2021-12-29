@@ -1,0 +1,57 @@
+[import](common.lg)
+
+# SendActivity_ErrorOccured()
+[Activity
+    Text = ${SendActivity_ErrorOccured_text()}
+]
+
+# SendActivity_ErrorOccured_text()
+- Oops, looks like I'm stuck. Can you try to ask me in a different way?
+- Looks like I'm all mixed up. Let's try asking again, but maybe rephrase your request?
+- Sorry, it looks like something went wrong. Can you please try again?
+
+# TextInput_Prompt_c5LsiH()
+[Activity
+    Text = ${expandText(@answer)}
+    SuggestedActions = ${foreach(turn.recognized.answers[0].context.prompts, x, x.displayText)}
+]
+
+# SendActivity_D9yWfc()
+- ${expandText(@answer)}
+
+# SendActivity_Atz54y()
+[Activity
+    SuggestedActions = Summary | Schedule | Subjects | Faculties | About Me
+]
+
+
+# SendActivity_JkwUIY()
+[Activity
+    SuggestedActions = Summary | Schedule | Subjects | Faculties | About Me
+]
+
+
+# SendActivity_JKXy7i()
+[Activity
+    SuggestedActions = Summary | Schedule | Subjects | Faculties | About Me
+]
+# SendActivity_s0ptZ4()
+[Activity
+    SuggestedActions = Summary | Schedule | Subjects | Faculties | About Me
+]
+# SendActivity_ljcLw6()
+[Activity
+    SuggestedActions = Summary | Schedule | Subjects | Faculties | About Me
+]
+# SendActivity_f7nIo2()
+[Activity
+    SuggestedActions = Summary | Schedule | Subjects | Faculties | About Me
+]
+# SendActivity_MYJb8S()
+[Activity
+    SuggestedActions = Summary | Schedule | Subjects | Faculties | About Me
+]
+# TeamsSendMEBotMessagePreviewResponse_Card_JYFLNa()
+[Activity
+    SuggestedActions = Summary | Schedule | Subjects | Faculties | About Me
+]

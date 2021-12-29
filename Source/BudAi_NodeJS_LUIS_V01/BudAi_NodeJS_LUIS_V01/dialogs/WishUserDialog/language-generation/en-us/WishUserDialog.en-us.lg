@@ -1,0 +1,60 @@
+[import](common.lg)
+
+# SendActivity_Morning_Text()
+- Good Morning ! 🌄 Have a nice day ❤️✨
+- Morning Dear ! ☀️ Wish you a good day ! 😇
+- Morning, My Dear Highness ! 🌺
+- Warm morning, highness !!! ✨❤️‍🔥
+- It's a new day and I wish you the best ! 🌻
+- Tadaaaa ! New day, New Beginnings 🥳🥳🥳
+
+# SendActivity_Afternoon_Text()
+- Good Afternoon Buddy 😇 Hope the day was good so far ! 🤩
+
+# SendActivity_Evening_Text()
+- Good Evening ! Hope the day went well. 🎉
+- Good Evening ! 🌇 Let's rock tonight by completing the pending tasks, if any.
+
+# SendActivity_Night_Text()
+- Had Dinner? 🍽️ Walk for few minutes 🚶 and let's continue later. Please ignore my advice, if you had already gave you a walk.
+- Night time ! 🌃
+
+# SendActivity_Midnight_Text()
+- Ohh ! You're still Awake ? Interesting ! 🤩
+- Still online ? Late worknights have created legends. Don't give up. Keep grinding ! 💖
+
+# SendActivity_LooTUq()
+[Activity
+    Text = ${SendActivity_LooTUq_text()}
+]
+
+# SendActivity_LooTUq_text()
+- ${SendActivity_Morning_Text()}
+# SendActivity_0DpjVu()
+[Activity
+    Text = ${SendActivity_0DpjVu_text()}
+]
+
+# SendActivity_0DpjVu_text()
+- ${SendActivity_Afternoon_Text()}
+# SendActivity_76fgMa()
+[Activity
+    Text = ${SendActivity_76fgMa_text()}
+]
+
+# SendActivity_76fgMa_text()
+- ${SendActivity_Evening_Text()}
+# SendActivity_XvwVEP()
+[Activity
+    Text = ${SendActivity_XvwVEP_text()}
+]
+
+# SendActivity_XvwVEP_text()
+- ${SendActivity_Night_Text()}
+# SendActivity_jASXV4()
+[Activity
+    Text = ${SendActivity_jASXV4_text()}
+]
+
+# SendActivity_jASXV4_text()
+- ${SendActivity_Midnight_Text()}

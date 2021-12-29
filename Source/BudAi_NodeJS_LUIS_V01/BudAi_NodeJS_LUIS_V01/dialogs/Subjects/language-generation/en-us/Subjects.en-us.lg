@@ -1,0 +1,99 @@
+[import](common.lg)
+
+# SendActivity_QNe2zW()
+[Activity
+    Attachments = ${json(SendActivity_QNe2zW_attachment_r57lXv())}
+    AttachmentLayout = carousel
+]
+
+# SendActivity_QNe2zW_attachment_r57lXv()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Courses enrolled by you : ",
+            "wrap": true,
+            "horizontalAlignment": "Center",
+            "size": "Large",
+            "weight": "Bolder",
+            "color": "Accent"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Algorithm Masterclass",
+            "wrap": true,
+            "size": "Medium",
+            "separator": true,
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Artificial Intelligence",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Computer Architecture",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Data Structures",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Design and Analysis of Algorithms",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Java Programming",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Computer Networks",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Python Programming",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Internships enrolled by you : ",
+            "wrap": true,
+            "horizontalAlignment": "Center",
+            "size": "Large",
+            "weight": "Bolder",
+            "color": "Good"
+        },{
+            "type": "TextBlock",
+            "text": "Microsoft Future Ready Talent Program",
+            "wrap": true,
+            "size": "Medium",
+            "horizontalAlignment": "Left"
+        }
+    ]
+}```
