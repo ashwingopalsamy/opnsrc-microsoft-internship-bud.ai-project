@@ -56,19 +56,24 @@ Bud.ai - The Student Twin provides an all-new conversational academic experience
 
 ## Requirements and Gathering
 
-1. [Azure Cloud Account with Active Subscription](https://azure.microsoft.com/en-in/account/) 
+1. [Microsoft Azure Bot Framework Composer](https://docs.microsoft.com/en-us/composer/):
 
-   ​		To start building, developing, managing our cloud applications - we first need to [create an account](https://portal.azure.com/) on Microsoft Azure.
+   ​	Bot Framework Composer, built on the Bot Framework SDK, is an open-source IDE for developers to author, test, provision, and manage conversational experiences. It provides a powerful visual authoring canvas enabling [dialogs](https://docs.microsoft.com/en-us/composer/concept-dialog), [language-understanding models](https://docs.microsoft.com/en-us/composer/concept-language-understanding), [QnAMaker Knowledge bases](https://docs.microsoft.com/en-us/composer/how-to-add-qna-to-bot), and [language generation](https://docs.microsoft.com/en-us/composer/concept-language-generation) responses to be authored from within one canvas and crucially, enables these experiences to be extended with code for more complex tasks such as system integration. Resulting experiences can then be tested within Composer and provisioned into Azure along with any dependent resources.
 
-   > ![Screenshot - My Azure Subscription](C:\Users\Ashwin Gounder\AppData\Roaming\Typora\typora-user-images\image-20220101125159346.png)
+   Composer is available as [a desktop application](https://docs.microsoft.com/en-us/composer/install-composer) for Windows, macOS, and Linux. Once you download it, you can open the application first and create a empty bot project.
 
-2. Create a **[Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview)**:
+   > ![image-20220101130708596](C:\Users\Ashwin Gounder\Desktop\Works\Personal Projects\Bud.ai - December2021\Bud.ai-TheStudentTwin\resources\Media\Screenshots\image-20220101130621928.png)
+
+2. [Azure Cloud Account with Active Subscription](https://azure.microsoft.com/en-in/account/) 
+
+​		To start building, developing, managing our cloud applications - we first need to [create an account](https://portal.azure.com/) on Microsoft Azure.
+
+> ![Screenshot - My Azure Subscription](C:\Users\Ashwin Gounder\Desktop\Works\Personal Projects\Bud.ai - December2021\Bud.ai-TheStudentTwin\resources\Media\Screenshots\image-20220101125159346.png)
+
+1. Create a **[Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview)**:
 
    ​	A Azure Resource Group is a logical collection of virtual machines, storage accounts, virtual networks, web apps, databases and/or database servers - to make it easy for users to manage resources easily.
-   
-   > ![Screenshot - My Resource Group](C:\Users\Ashwin Gounder\AppData\Roaming\Typora\typora-user-images\image-20220101125742395.png)
-   
-   
-   
-   ​		
 
+   > ![Screenshot - My Resource Group](C:\Users\Ashwin Gounder\Desktop\Works\Personal Projects\Bud.ai - December2021\Bud.ai-TheStudentTwin\resources\Media\Screenshots\image-20220101125742395.png)
+
+3. 
