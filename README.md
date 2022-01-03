@@ -66,14 +66,19 @@ Bud.ai - The Student Twin provides an all-new conversational academic experience
 
 2. [Azure Cloud Account with Active Subscription](https://azure.microsoft.com/en-in/account/) 
 
-​		To start building, developing, managing our cloud applications - we first need to [create an account](https://portal.azure.com/) on Microsoft Azure.
+   ​	To start building, developing, managing our cloud applications - we first need to [create an account](https://portal.azure.com/) on Microsoft Azure.
 
-> ![Screenshot - My Azure Subscription](resources/Media/Screenshots/image-20220101125159346.png)
+   > ![Screenshot - My Azure Subscription](resources/Media/Screenshots/image-20220101125159346.png)
 
-1. Create a **[Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview)**:
 
-   ​	A Azure Resource Group is a logical collection of virtual machines, storage accounts, virtual networks, web apps, databases and/or database servers - to make it easy for users to manage resources easily.
 
-   > ![Screenshot - My Resource Group](resources/Media/Screenshots/image-20220101125742395.png)
 
-3. 
+
+## Project Cost :
+
+  ​	As of 3rd January, 2022 - The app has been hosted on Azure for 9 days now. From my $100 dollar Azure Students Credit - 72$ has already got consumed - which is roughly around 5000 INR. 
+
+  > ![image](https://user-images.githubusercontent.com/92003502/147897299-e163f273-3195-488b-87e8-18a8f1e996c3.png)
+
+
+
