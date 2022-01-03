@@ -1,0 +1,6 @@
+[import](common.lg)
+
+# SendActivity_ykO3kX()
+[Activity
+    SuggestedActions = 1. Summary | 2.Schedule | 3.Subjects | 4.Faculties | 5.5.About Me
+]

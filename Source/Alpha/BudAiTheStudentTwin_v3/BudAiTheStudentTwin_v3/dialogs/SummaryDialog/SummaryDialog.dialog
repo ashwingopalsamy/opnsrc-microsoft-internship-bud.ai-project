@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "VLV8pc",
+    "name": "SummaryDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "3XHGuq"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "owCkfS"
+          },
+          "activity": "${SendActivity_owCkfS()}"
+        }
+      ]
+    }
+  ],
+  "generator": "SummaryDialog.lg",
+  "recognizer": "SummaryDialog.lu.qna",
+  "id": "SummaryDialog"
+}

@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "oDgU5T",
+    "name": "FacultyDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "zmLcCM"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Xdb31w"
+          },
+          "activity": "${SendActivity_Xdb31w()}"
+        }
+      ]
+    }
+  ],
+  "generator": "FacultyDialog.lg",
+  "recognizer": "FacultyDialog.lu.qna",
+  "id": "FacultyDialog"
+}

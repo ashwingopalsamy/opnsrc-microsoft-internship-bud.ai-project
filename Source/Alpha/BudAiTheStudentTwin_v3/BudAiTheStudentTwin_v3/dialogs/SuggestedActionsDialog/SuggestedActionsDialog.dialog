@@ -1,0 +1,33 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "vGtsva",
+    "name": "SuggestedActionsDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "4zSwRH"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "ykO3kX"
+          },
+          "activity": "${SendActivity_ykO3kX()}"
+        }
+      ],
+      "condition": true
+    }
+  ],
+  "generator": "SuggestedActionsDialog.lg",
+  "recognizer": "SuggestedActionsDialog.lu.qna",
+  "id": "SuggestedActionsDialog"
+}

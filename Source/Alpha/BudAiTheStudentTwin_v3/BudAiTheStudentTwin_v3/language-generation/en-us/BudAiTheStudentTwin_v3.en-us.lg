@@ -1,0 +1,24 @@
+[import](common.lg)
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- ```Sorry, I didn't get that. 
+Could you please rephrase it?```
+# SendActivity_uOHyQC()
+[Activity
+    Text = ${SendActivity_uOHyQC_text()}
+]
+
+# SendActivity_uOHyQC_text()
+- Are you sure that you want to quit?
+# SendActivity_uh4u8o()
+[Activity
+    Text = ${SendActivity_uh4u8o_text()}
+]
+
+# SendActivity_uh4u8o_text()
+- Try any one of the below suggestions again.

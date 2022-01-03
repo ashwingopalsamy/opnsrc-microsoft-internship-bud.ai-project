@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# SendActivity_YrYwGJ()
+[Activity
+    Text = ${SendActivity_YrYwGJ_text()}
+]
+
+# SendActivity_YrYwGJ_text()
+- ```🌟 Available features :
+1. Summary
+2. Schedule
+3. Subjects
+4. Faculties
+5. About me
+
+Type any one of the above ```

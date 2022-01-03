@@ -1,0 +1,39 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "UUpv9q",
+    "name": "ScheduleDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "XzbrSB"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "TeC6W4"
+          },
+          "activity": "${SendActivity_TeC6W4()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "drVEGq"
+          },
+          "activity": "${SendActivity_drVEGq()}"
+        }
+      ]
+    }
+  ],
+  "generator": "ScheduleDialog.lg",
+  "recognizer": "ScheduleDialog.lu.qna",
+  "id": "ScheduleDialog"
+}

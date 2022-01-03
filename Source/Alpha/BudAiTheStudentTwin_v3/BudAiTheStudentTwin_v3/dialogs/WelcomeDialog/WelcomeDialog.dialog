@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "9heFNu",
+    "name": "WelcomeDialog",
+    "comment": "Dialog that triggers the welcome conversation for the bot application.\n"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "buGG4K"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "mZdnOO"
+          },
+          "activity": "${SendActivity_mZdnOO()}"
+        }
+      ]
+    }
+  ],
+  "generator": "WelcomeDialog.lg",
+  "recognizer": "WelcomeDialog.lu.qna",
+  "id": "WelcomeDialog"
+}

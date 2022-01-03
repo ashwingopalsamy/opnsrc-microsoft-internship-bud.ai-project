@@ -1,0 +1,955 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "name": "BudAiTheStudentTwin_v3",
+    "description": "",
+    "id": "A79tBe"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "376720",
+        "comment": "This trigger runs when a conversation update activity is sent to the bot. This indicates a user or bot being added or removed from a conversation."
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "518944",
+            "name": "Loop: for each item",
+            "comment": "For each member added to the conversation."
+          },
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "641773",
+                "name": "Branch: if/else",
+                "comment": "Checks that that member added ID does not match the bot ID. This prevents the greeting message from being sent when the bot is added to a conversation."
+              },
+              "condition": "=string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "JZnEsO"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "WelcomeDialog"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "2ZbHr8"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "WishUserDialog"
+                },
+                {
+                  "$kind": "Microsoft.SwitchCondition",
+                  "$designer": {
+                    "id": "zQAmzX"
+                  },
+                  "condition": "turn.activity.channelId",
+                  "default": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "3O0h9q"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "SuggestedActionsDialog"
+                    }
+                  ],
+                  "cases": [
+                    {
+                      "value": "msteams",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "2JlLlQ"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "AvailableOptionsDialog"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "elseActions": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnUnknownIntent",
+      "$designer": {
+        "id": "mb2n1u",
+        "comment": "This trigger fires when an incoming activity is not handled by any other trigger."
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "kMjqz1",
+            "comment": "It is recommended to show a message to the user when the bot does not know how to handle an incoming activity and provide follow up options or a help message."
+          },
+          "activity": "${SendActivity_DidNotUnderstand()}"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "ZmXmTP"
+          },
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "4j7gmC"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "IhmZ7u"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "v2RHrc",
+        "name": "About-Me"
+      },
+      "intent": "About-Me",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "XiBrz7"
+          },
+          "activityProcessed": true,
+          "dialog": "AboutMeDialog"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "HIyxU4"
+          },
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "bRbOd3"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AboutMeDialog"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "w0CZn8"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "JsVizM"
+              },
+              "activityProcessed": true,
+              "dialog": "AboutMeDialog"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "Yd6qqt"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "Plo4PQ",
+        "name": "CW1"
+      },
+      "intent": "CW1",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "NIZXV4"
+          },
+          "activityProcessed": true,
+          "dialog": "GreetUserDialog"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "jh5GBy"
+          },
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "jxheDF"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "uzvPGK"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ]
+        }
+      ],
+      "condition": true
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "rlRvxR",
+        "name": "CW2"
+      },
+      "intent": "CW2",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "XC6jNi"
+          },
+          "activityProcessed": true,
+          "dialog": "GreetUserDialog"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "kddfiK"
+          },
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "esqSy9"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "EekioE"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ]
+        }
+      ],
+      "condition": true
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "mmmmKY",
+        "name": "CW3"
+      },
+      "intent": "CW3",
+      "condition": true,
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "pP9KaA"
+          },
+          "activityProcessed": true,
+          "dialog": "GreetUserDialog"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "OiK7sm"
+          },
+          "condition": "turn.activity.channelId",
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "qQ92bl"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ],
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "nnAL9Q"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "Eibv1D",
+        "name": "Summary"
+      },
+      "intent": "Summary",
+      "actions": [
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "hViUhc"
+          },
+          "condition": "turn.activity.channelId",
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "jNffRS"
+              },
+              "activityProcessed": true,
+              "dialog": "SummaryDialog"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "5Ln0GL"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ],
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "H7Idif"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "SummaryDialog"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "3wJI80"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "condition": true
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "rZZwpz",
+        "name": "Schedule"
+      },
+      "intent": "Schedule",
+      "condition": true,
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "7FNCth"
+          },
+          "activityProcessed": true,
+          "dialog": "ScheduleDialog"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "shcQEK"
+          },
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "AiMo7s"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ],
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "BV1Czy"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "i30xMb",
+        "name": "Subject"
+      },
+      "intent": "Subject",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "vEBiyc"
+          },
+          "activityProcessed": true,
+          "dialog": "SubjectDialog"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "svE9fR"
+          },
+          "condition": "turn.activity.channelId",
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "vS2i9g"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ],
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "EDHwFv"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "Krl5ym",
+        "name": "Faculties"
+      },
+      "intent": "Faculties",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "f7kfuq"
+          },
+          "activityProcessed": true,
+          "dialog": "FacultyDialog"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "6Ul4WY"
+          },
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "dQqqvE"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "f5IEMI"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "iso4mz",
+        "name": "CW4"
+      },
+      "intent": "CW4",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "uOHyQC"
+          },
+          "activity": "${SendActivity_uOHyQC()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "uh4u8o"
+          },
+          "activity": "${SendActivity_uh4u8o()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "OzbPsY"
+          },
+          "activityProcessed": true,
+          "dialog": "SuggestedActionsDialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "eiWkqn",
+        "name": "Typed1"
+      },
+      "intent": "Typed1",
+      "actions": [
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "U5197i"
+          },
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "bDIH7W"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "SummaryDialog"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "6g6Omx"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "8NRiet"
+              },
+              "activityProcessed": true,
+              "dialog": "SummaryDialog"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "2GE4zf"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "fQL8CE",
+        "name": "Typed2"
+      },
+      "intent": "Typed2",
+      "actions": [
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "mKP9fr"
+          },
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "B67oa5"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "ScheduleDialog"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "n6IZCu"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "GOlsK5"
+              },
+              "activityProcessed": true,
+              "dialog": "ScheduleDialog"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "Duuhf4"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "TTD04C",
+        "name": "Typed3"
+      },
+      "intent": "Typed3",
+      "actions": [
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "6i8VyM"
+          },
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "nnKg0w"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "SubjectDialog"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "eRseib"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "B6WZ4u"
+              },
+              "activityProcessed": true,
+              "dialog": "SubjectDialog"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "2oTRcg"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "baCbMu",
+        "name": "Typed4"
+      },
+      "intent": "Typed4",
+      "actions": [
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "DxHgUw"
+          },
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "q48Cmp"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "FacultyDialog"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "lCcyqz"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "A5uWgf"
+              },
+              "activityProcessed": true,
+              "dialog": "FacultyDialog"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "ekZX0q"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "JRBKtB",
+        "name": "Typed5"
+      },
+      "intent": "Typed5",
+      "actions": [
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "27j15F"
+          },
+          "condition": "turn.activity.channelId",
+          "cases": [
+            {
+              "value": "msteams",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "vAgo3E"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AboutMeDialog"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "VK2o98"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "AvailableOptionsDialog"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "Fx1pvo"
+              },
+              "activityProcessed": true,
+              "dialog": "AboutMeDialog"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "alVT6G"
+              },
+              "activityProcessed": true,
+              "dialog": "SuggestedActionsDialog"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "BudAiTheStudentTwin_v3.lg",
+  "id": "BudAiTheStudentTwin_v3",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "About-Me",
+        "pattern": "about me"
+      },
+      {
+        "intent": "CW1",
+        "pattern": "hi"
+      },
+      {
+        "intent": "CW2",
+        "pattern": "hello"
+      },
+      {
+        "intent": "CW3",
+        "pattern": "hi bud.ai"
+      },
+      {
+        "intent": "Summary",
+        "pattern": "Summary"
+      },
+      {
+        "intent": "Schedule",
+        "pattern": "schedule"
+      },
+      {
+        "intent": "Subject",
+        "pattern": "subject"
+      },
+      {
+        "intent": "Faculties",
+        "pattern": "faculties"
+      },
+      {
+        "intent": "CW4",
+        "pattern": "quit"
+      },
+      {
+        "intent": "Typed1",
+        "pattern": "1"
+      },
+      {
+        "intent": "Typed2",
+        "pattern": "2"
+      },
+      {
+        "intent": "Typed3",
+        "pattern": "3"
+      },
+      {
+        "intent": "Typed4",
+        "pattern": "4"
+      },
+      {
+        "intent": "Typed5",
+        "pattern": "5"
+      }
+    ]
+  }
+}
