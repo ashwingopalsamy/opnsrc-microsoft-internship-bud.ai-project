@@ -1,0 +1,17 @@
+{
+  "profileName": "BudAiTheStudentTwin___v3",
+  "jobId": "e87b3f9a-eb46-44a1-8d49-e43735af9db1",
+  "projectId": "5196.492959449728",
+  "time": "2022-01-15T04:22:55.290Z",
+  "log": [
+    "Creating Azure resources...",
+    "Checking the Existence of the Resource Group ...",
+    "Creating Resource Group ...",
+    "> Creating App Registration ...",
+    "Start to add password for App, Id : 57ab066d-7d8e-40ad-a463-67ed07688c36",
+    "> Create App Registration Success! ID: 57ab066d-7d8e-40ad-a463-67ed07688c36",
+    "Deploying Web App Resource ...",
+    "Deploying Bot Resource ...",
+    "Provisioning completed successfully!"
+  ]
+}
