@@ -1,6 +1,6 @@
-# Welcome to your new bot
+# Welcome to Bud.ai - The Student Twin Bot
 
-This bot project was created using the Empty Bot template, and contains a minimal set of files necessary to have a working bot.
+This bot project was built using the Microsoft Azure Bot Framework Composer and deployed on Azure App Service.
 
 ## Next steps
 
